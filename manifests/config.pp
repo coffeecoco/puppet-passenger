@@ -1,4 +1,8 @@
 class passenger::config {
-  apache::module{'headers':}
-  apache::module{'passenger':}
+  if !defined(Apache::Module['headers']) {
+    apache::module{'headers':}
+  }
+  if !defined(Apache::Module['passenger']) {
+    apache::module{'passenger':}
+  }
 }
