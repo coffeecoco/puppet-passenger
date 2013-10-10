@@ -1,8 +1,8 @@
 class passenger::config {
-  if !defined(Apache::Module['headers']) {
-    apache::module{'headers':}
+  if !defined(Apache_c2c::Module['headers']) {
+    apache_c2c::module{'headers':}
   }
-  if !defined(Apache::Module['passenger']) {
-    apache::module{'passenger':}
+  if !defined(Apache_c2c::Module['passenger']) {
+    apache_c2c::module{'passenger':}
   }
 }
